@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Column Grid Overlay</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>Column Grid Overlay</h1>
+    </header>
+
+    <main class="popup-main">
+      <!-- Toggle Switch -->
+      <div class="control-group">
+        <label class="toggle-label">
+          <span>Grid Overlay</span>
+          <label class="switch">
+            <input type="checkbox" id="toggle-grid">
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+
+      <!-- Preset Selector -->
+      <div class="control-group">
+        <label for="preset-select">Preset</label>
+        <select id="preset-select" class="select-input">
+          <option value="custom">Custom</option>
+          <option value="bootstrap">Bootstrap</option>
+          <option value="tailwind">Tailwind</option>
+          <option value="material">Material Design</option>
+        </select>
+      </div>
+
+      <!-- Column Count -->
+      <div class="control-group">
+        <label for="column-count">Columns</label>
+        <div class="number-input">
+          <button type="button" class="btn-decrement" data-target="column-count">−</button>
+          <input type="number" id="column-count" min="1" max="24" value="12">
+          <button type="button" class="btn-increment" data-target="column-count">+</button>
+        </div>
+      </div>
+
+      <!-- Gutter Width -->
+      <div class="control-group">
+        <label for="gutter-width">Gutters (px)</label>
+        <div class="number-input">
+          <button type="button" class="btn-decrement" data-target="gutter-width">−</button>
+          <input type="number" id="gutter-width" min="0" max="200" value="20">
+          <button type="button" class="btn-increment" data-target="gutter-width">+</button>
+        </div>
+      </div>
+
+      <!-- Margin Width -->
+      <div class="control-group">
+        <label for="margin-width">Margins (px)</label>
+        <div class="number-input">
+          <button type="button" class="btn-decrement" data-target="margin-width">−</button>
+          <input type="number" id="margin-width" min="0" max="200" value="0">
+          <button type="button" class="btn-increment" data-target="margin-width">+</button>
+        </div>
+      </div>
+
+      <!-- Column Color -->
+      <div class="control-group">
+        <label for="column-color">Column Color</label>
+        <div class="color-input">
+          <input type="color" id="column-color" value="#ff0000">
+          <input type="range" id="column-opacity" min="0" max="100" value="10" class="opacity-slider">
+          <span id="column-opacity-value" class="opacity-value">10%</span>
+        </div>
+      </div>
+
+      <!-- Show Gutters Toggle -->
+      <div class="control-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="show-gutters">
+          <span>Show Gutter Colors</span>
+        </label>
+      </div>
+
+      <!-- Gutter Color (shown when gutters are visible) -->
+      <div class="control-group" id="gutter-color-group" style="display: none;">
+        <label for="gutter-color">Gutter Color</label>
+        <div class="color-input">
+          <input type="color" id="gutter-color" value="#0000ff">
+          <input type="range" id="gutter-opacity" min="0" max="100" value="10" class="opacity-slider">
+          <span id="gutter-opacity-value" class="opacity-value">10%</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <button type="button" id="save-preset" class="btn btn-secondary">Save Preset</button>
+        <button type="button" id="reset-defaults" class="btn btn-secondary">Reset</button>
+      </div>
+
+      <!-- Keyboard Shortcut Info -->
+      <div class="info-box">
+        <small>Press <kbd>Ctrl+Shift+G</kbd> (or <kbd>⌘+Shift+G</kbd> on Mac) to toggle grid</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="../utils/config.js"></script>
+  <script src="../utils/presets.js"></script>
+  <script src="../utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Column Grid Overlay",
+  "version": "1.0.4",
+  "description": "Figma-style column grid overlay for layout inspection",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/utils/config.js",
+        "src/content/gridRenderer.js",
+        "src/content/content.js"
+      ],
+      "css": ["src/styles/grid.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "toggle-grid": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "Toggle grid overlay"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

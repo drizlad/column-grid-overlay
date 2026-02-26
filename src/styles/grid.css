@@ -1,0 +1,34 @@
+/* Grid overlay styles */
+.column-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2147483647; /* Maximum z-index */
+  display: flex;
+  justify-content: center;
+}
+
+.column-grid-overlay__inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.column-grid-overlay__inner--centered {
+  margin: 0 auto;
+}
+
+.column-grid-overlay__column {
+  flex-shrink: 0;
+  height: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.column-grid-overlay__gutter {
+  flex-shrink: 0;
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "column-grid-overlay",
+  "version": "1.0.4",
+  "description": "Chrome extension for Figma-style column grid overlay",
+  "keywords": [
+    "chrome-extension",
+    "grid",
+    "layout",
+    "design",
+    "figma",
+    "columns"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
