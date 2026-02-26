@@ -6,6 +6,8 @@ A Chrome extension that overlays a Figma-style column grid on any webpage to hel
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)
 ![License MIT](https://img.shields.io/badge/License-MIT-yellow)
 
+<!-- Add a screenshot here: ![Screenshot](screenshot.png) -->
+
 ## Features
 
 - 🎯 Customizable column grid overlay (1-24 columns)
@@ -22,13 +24,25 @@ A Chrome extension that overlays a Figma-style column grid on any webpage to hel
 ### From Chrome Web Store
 *Coming soon*
 
-### Manual Installation (Developer Mode)
+### Install from GitHub
 
-1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" (toggle in top right)
-4. Click "Load unpacked"
-5. Select the project folder
+**Option 1: Download ZIP**
+1. Click the green **Code** button above
+2. Select **Download ZIP**
+3. Extract the ZIP file to a folder on your computer
+4. Open Chrome and go to `chrome://extensions/`
+5. Enable **Developer mode** (toggle in top right corner)
+6. Click **Load unpacked**
+7. Select the extracted folder
+8. The extension icon will appear in your toolbar
+
+**Option 2: Clone with Git**
+```bash
+git clone https://github.com/YOUR_USERNAME/column-grid-overlay.git
+```
+Then follow steps 4-8 above.
+
+> **Note:** After installation, refresh any open tabs for the extension to work on them.
 
 ## Usage
 
